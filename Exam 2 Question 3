@@ -1,0 +1,17 @@
+phrase = input("Enter a phrase: ")
+key = int(input("Enter a key: "))
+
+encryptedMessage = ""
+for myChar in phrase :
+	newChar = chr((ord(myChar)) + key % 127)
+	encryptedMessage += newChar
+
+
+newMessage = ""
+for myChar in encryptedMessage :
+	original = chr( (ord(myChar) - key % 127))
+	newMessage += original
+
+
+print("Encrypted Message = %s " % encryptedMessage)
+print("Decrypted Message = %s " % newMessage)
