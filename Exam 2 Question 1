@@ -1,0 +1,10 @@
+c = [ 1, 2, 4, 6, 10 ]
+
+output = 0
+print(c)
+for index,element in enumerate(c) :
+	if index == 2 :
+		continue
+	output += element   #  output = output + element
+	print(" Looking at index " + str(index) + "Updated output is " + str(output) )
+    
